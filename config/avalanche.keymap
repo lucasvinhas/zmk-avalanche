@@ -106,9 +106,9 @@
             bindings = <
 &cw       &kp N1      &kp F2       &kp F3   &kp F4      &kp F5                      &kp F7  &kp F8    &kp RBKT      &kp F10     &kp MINUS  &kp EQUAL
 &kp TAB   &kp Q       &kp W        &kp E    &kp R       &kp T                       &kp Y   &kp U     &kp I         &kp O       &kp P      &kp LBKT
-&kp ESC   &kp LALT    &hm LCTRL A  &lt 3 S  &hm LGUI D  &hm LSHIFT F  &kp G                 &kp H     &hm LSHIFT J  &hm LGUI K  &lt 3 L    &hm RCTRL SEMI  &kp SQT   &tog 4
+&kp ESC   &kp LALT    &hm LCTRL A  &lt 3 S  &hm LGUI D  &hm LSHIFT F  &kp G                 &kp H     &hm LSHIFT J  &hm LGUI K  &lt 3 L    &hm RCTRL SEMI  &kp SQT   &tog 0
 &kp LALT  &kp Z       &kp X        &kp C    &kp V       &kp B         &none  &none  &none   &none     &kp N         &kp M       &kp COMMA  &kp DOT         &kp FSLH  &kp RALT
-          &kp C_MUTE  &mo 4        &mo 1    &kp SPACE   &kp TAB                     &td0    &kp BSPC  &mo 4         &mo 3       &kp PSCRN
+          &kp C_MUTE  &mo 2        &mo 1    &kp SPACE   &kp TAB                     &td0    &kp BSPC  &mo 1         &mo 3       &kp PSCRN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -150,18 +150,6 @@
             sensor-bindings = <&inc_dec_kp RGB_BRD RGB_BRI &inc_dec_kp RGB_EFR RGB_EFF>;
         };
 
-        game_layer {
-            bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4     &kp N5                  &kp N6  &kp N7    &kp N8  &kp N9  &kp N0     &kp EQUAL
-&kp TAB    &kp Q   &kp W   &kp E   &kp R      &kp T                   &kp Y   &kp U     &kp I   &kp O   &kp P      &kp MINUS
-&kp LSHFT  &kp A   &kp S   &kp D   &kp F      &kp G   &trans                  &kp H     &kp J   &kp K   &kp L      &kp SEMI   &kp SQT   &kp GRAVE
-&kp LCTRL  &kp Z   &kp X   &kp C   &kp V      &kp B   &trans  &trans  &trans  &trans    &kp N   &kp M   &kp COMMA  &kp DOT    &kp FSLH  &kp RALT
-           &trans  &trans  &trans  &kp SPACE  &trans                  &to 0   &kp BSPC  &trans  &trans  &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
-        };
-
         layer_5 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
@@ -173,6 +161,3 @@
         };
     };
 };
-
-
-
