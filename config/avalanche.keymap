@@ -57,7 +57,8 @@
                 <&kp LEFT_GUI &kp LEFT_SHIFT>,
                 <&macro_tap>,
                 <&kp LEFT_BRACKET>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_COMMAND &kp LEFT_SHIFT>;
 
             label = "M1";
         };
@@ -70,7 +71,8 @@
                 <&kp LEFT_GUI &kp LEFT_SHIFT>,
                 <&macro_tap>,
                 <&kp RIGHT_BRACKET>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_COMMAND &kp LEFT_SHIFT>;
 
             label = "M2";
         };
