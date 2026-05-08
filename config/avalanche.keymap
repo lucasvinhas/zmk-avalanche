@@ -20,7 +20,7 @@
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            display-name = "Homerow Mods";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <100>;
@@ -32,7 +32,7 @@
 
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_ENTER";
+            display-name = "Tap Dance Enter";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp RET>, <&kp RET>;
@@ -42,7 +42,7 @@
 
         cw: caps_word {
             compatible = "zmk,behavior-caps-word";
-            label = "CAPS_WORD";
+            display-name = "Caps Word";
             #binding-cells = <0>;
             continue-list = <UNDERSCORE MINUS BACKSPACE>;
         };
@@ -60,7 +60,7 @@
                 <&macro_release>,
                 <&kp LEFT_COMMAND &kp LEFT_SHIFT>;
 
-            label = "M1";
+            display-name = "M1";
         };
 
         m2: m2 {
@@ -74,7 +74,7 @@
                 <&macro_release>,
                 <&kp LEFT_COMMAND &kp LEFT_SHIFT>;
 
-            label = "M2";
+            display-name = "M2";
         };
 
         m3: m3 {
@@ -87,14 +87,14 @@
                 <&kp Y>,
                 <&macro_release>;
 
-            label = "M3";
+            display-name = "M3";
         };
 
         ChangeInput: ChangeInput {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none>;
-            label = "CHANGEINPUT";
+            display-name = "Change Input";
         };
     };
 
@@ -112,9 +112,9 @@
           &kp C_MUTE  &mo 1        &mo 2    &kp SPACE   &kp TAB                     &td0    &kp BSPC  &mo 3         &mo 1       &kp PSCRN
             >;
 
-            /* FIXED: Removed 2nd binding causing crash */
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         sym_layer {
@@ -126,9 +126,9 @@
         &trans     &trans           &trans       &trans       &trans                     &trans    &trans     &trans            &trans             &trans
             >;
 
-            /* FIXED: Removed 2nd binding */
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         nav_layer {
@@ -140,9 +140,9 @@
         &trans  &trans  &trans          &trans        &trans                        &trans     &kp BACKSPACE  &kp DELETE  &trans  &trans
             >;
 
-            /* FIXED: Removed 2nd binding */
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         num_layer {
@@ -154,9 +154,9 @@
         &trans  &trans  &trans  &kp N0  &trans                  &trans  &trans  &trans  &trans  &trans
             >;
 
-            /* FIXED: Removed invalid RGB bindings and reduced to 1 sensor */
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         layer_5 {
